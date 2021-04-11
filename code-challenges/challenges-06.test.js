@@ -56,6 +56,11 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
+  return charArray.sort((a, b) => {
+    if (a.children.length > b.children.length) return 1;
+    if (a.children.length < b.children.length) return -1;
+    else return 0;
+  });
 
 };
 
@@ -66,6 +71,9 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
+const courseInfo = {
+  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
+=======
 const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
@@ -87,6 +95,17 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
+  let valObj = Object.values(obj);
+  for (let i = 0; i < valObj; i++) {
+    if (valObj[i] === value) {
+      return true;
+    }
+    else {
+      return false;
+    }
+
+  }
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -110,6 +129,9 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
+  const merged = Object.entries(obj).map(v => v.join(': '));
+  return merged;
+=======
 };
 
 
@@ -123,6 +145,9 @@ Write a function named getHouses that returns a new array containing the names o
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+  arr.map(v => houses.push(v.house));
+
+=======
   const valuesForArr =sortByChildren(arr);
   valuesForArr.forEach(a=>{
     houses.push(a.house)
@@ -144,6 +169,20 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+  let checkChildren;
+  arr.forEach(function (v) {
+    if (v.name === character) {
+      if (v.name.length > 0) {
+        checkChildren= true;
+      }
+      else checkChildren= false;
+    }
+
+  });
+  return checkChildren;
+
+};
+=======
 
 };
 
