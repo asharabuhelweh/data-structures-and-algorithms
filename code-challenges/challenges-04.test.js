@@ -9,9 +9,9 @@ Write a function called addTwo that takes in an array and adds two to every valu
 const addTwo = (arr) => {
   // Solution code here...
     let newArray=[];
-    arr.forEach(number=>{
-      newArray.push(number+=2 )
-    }); 
+    for(let i=0; i< arr.length ;i++){
+      newArray.push(arr[i]+2);
+    } 
   return newArray; 
   }
   
@@ -26,8 +26,8 @@ Write a function named containsW that takes in a string. This function should us
 
 const containsW = (str) => {
   // Solution code here...
-  let re = /w/g;
-  re.test(str);
+  let reg = /w/g;
+   return reg.test(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,8 +58,8 @@ Write a function named containsWorld that takes in a string or number of any len
 
 const containsWorld = (input) => {
   // Solution code here...
-  let re=/^[a-z]/;
-  return re.test(input)
+  let reg = /world/g;
+  return reg.test(input)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,6 +71,14 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
+  let regex = /[A-Z][a-z]*/g;
+  if(str.match(regex)){
+    return str.match(regex);
+  }
+  else {
+    let empty=[];
+    return empty;
+  }
   // Solution code here...
 };
 
@@ -82,6 +90,15 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let capitalCities=[];
+  let regex =  /^[A-J](\w)*/;
+  arr.forEach(function(word){
+    if(regex.test(word)){
+      capitalCities.push(word);
+    }
+  })
+return capitalCities;
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
