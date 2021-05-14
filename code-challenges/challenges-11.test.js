@@ -3,29 +3,24 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named getNames that, given an array of people objects, uses map to return an array of names reversed.
+Write a function named transformToLis that, given an object, returns an array of the key value pairs as html list items.
 
 For example: 
-[
 {
-  name: 'lloyd',
-  age: 32,
-  shoeSize: 12
-}, 
-{
-  name: 'jamie',
-  age: 21,
-  shoeSize: 8
+  name: 'bob',
+  age: 32
 }
-]
 
-Returns: ['dyoll', 'eimaj'];
+Becomes: 
+[
+<li>name: bob</li>,
+<li>age: 32</li>
+]
 ------------------------------------------------------------------------------------------------ */
 
-const getNames = (arr) => {
+function transformToLis(obj){
   // Solution code here...
-  return arr.map(value => value.name.split('').reverse().join(''));
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -39,14 +34,6 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
-  return input.reduce((total, v) => {
-    v.reduce((total2, v2) => {
-      v2 === target ? total++ : false;
-
-    }, 0);
-    return total;
-
-  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,12 +48,6 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
-  return input.reduce((total, v) => {
-    v.reduce((total2, v2) => {
-      total += v2;
-    }, 0);
-    return total;
-  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,19 +63,7 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  let newArr =[];
-  input.forEach(arr => {
-    newArr.push(arr.filter((value) => {
-      if (typeof value !== 'number' || value % 5 !== 0) {
-        return false;
-      } else {
-        return true;
-      }
-    }).map((elem) => {
-      return Math.pow(2, elem);
-    }));
-  });
-  return newArr;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -161,30 +130,17 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
-  let arr = [];
-  data.forEach(value => {
-    if (value.gender === 'male' || value.gender === 'female') {
-      arr.push(value.name);
-    }
-  })
-  return arr.join(' and ');
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
 
-Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the shortest character.
+Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the character who is the shortest in height.
 ------------------------------------------------------------------------------------------------ */
 
-  let findShortest = (data) => {
-    const shortCharacter = data.reduce((total, value) => {
-      return (parseInt(total.height) < parseInt(value.height) ? total : value);
-    }, {});
-    return shortCharacter.name;
-  };
-  
-
+let findShortest = (data) => {
+  // Solution code here...
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -198,9 +154,10 @@ Run your tests from the console: jest challenges-10.test.js
 ------------------------------------------------------------------------------------------------ */
 
 describe('Testing challenge 1', () => {
-  test('It returns an array of names reversed', () => {
-    expect(getNames([{ name: 'lloyd', age: 32, shoeSize: 12 }, { name: 'jamie', age: 21, shoeSize: 8 }])).toStrictEqual(['dyoll', 'eimaj']);
-    expect(getNames([])).toStrictEqual([]);
+  test('It should return a list of key value pairs inside of li tags', () => {
+    expect(transformToLis({name: 'bob', age: 32})[0]).toStrictEqual(`<li>name: bob</li>`);
+    expect(transformToLis({name: 'bob', age: 32})[1]).toStrictEqual(`<li>age: 32</li>`);
+    expect(transformToLis({})).toStrictEqual([]);
   });
 });
 
