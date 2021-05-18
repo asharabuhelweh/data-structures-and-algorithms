@@ -7,6 +7,8 @@ describe("Return the index of the search key ", () => {
     expect(
       newArray([-1, 0, 58, 77, 7, 98, 14], 90)
     ).toStrictEqual(-1);
+    expect(newArray([], 222)).toBeNull();
+
     
 
   });

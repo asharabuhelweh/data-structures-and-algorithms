@@ -31,7 +31,10 @@ const binarySearch = (sortedArray, key) => {
     }
   }
 
+  if(sortedArray.length===0){
+   return null
+  }
   return -1 //if not found
-}
 
+}
    module.exports = binarySearch;
