@@ -18,5 +18,6 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 | Code Challenge      | Title | link    |
 | :---        |    :----:   |          ---: |
-| Class: 01      | 	Reverse an array       | [go](javascript/array-reverse)   |
-| Class: 02   | Array Shift        | [go](javascript/array-shif)      |
+| Class: 01      | 	Reverse an array       | [click](javascript/array-reverse)   |
+| Class: 02   | Array Shift        | [click](javascript/array-shif)      |
+
