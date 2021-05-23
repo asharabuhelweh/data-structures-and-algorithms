@@ -5,7 +5,7 @@ const { expect } = require('@jest/globals');
 
 
 
-describe('linked list',()=>{
+describe('linked list', () => {
   it(' should instantiate an empty linked list', () => {
 
     let linkedList = new LinkedList();
@@ -29,13 +29,13 @@ describe('linked list',()=>{
 
 describe('check the insert method', () => {
   it("should add new Head", () => {
-     //arrange
-    let linkedList = new LinkedList();  
+    //arrange
+    let linkedList = new LinkedList();
 
-     //act
+    //act
     linkedList.insert(5);
     linkedList.insert(7); //This is the head
-     //assert 
+    //assert 
     expect(linkedList.head.value).toEqual(7);
   });
 
@@ -52,9 +52,9 @@ describe('check include method', () => {
     linkedList.insert(55);
     linkedList.insert(33);
     linkedList.insert(99);
-     
+
     let existNode = linkedList.includes(33);
-      //assert
+    //assert
     expect(existNode).toEqual(true);
 
   });
@@ -96,9 +96,95 @@ describe('check the toString method', () => {
     expect(array[6]).toEqual("{5}");
     expect(array[8]).toEqual("NULL");
   });
-
-
+  
 });
+
+describe('linked list', () => {
+
+  it('should add a node to the end of the linked list', () => {
+    //arrange
+    let linkedList = new LinkedList();
+
+    //act
+    linkedList.insert(20);
+    linkedList.insert(30);
+    linkedList.append(40);
+    //assert
+    expect(linkedList.head.value).toEqual(30);
+    expect(linkedList.head.next.value).toEqual(20);
+    expect(linkedList.head.next.next.value).toEqual(40);
+  });
+
+  it("Should add multiple nodes to the end of a linked list", () => {
+    //arrange
+    let linkedList = new LinkedList();
+    //act
+    linkedList.insert(1);
+    linkedList.insert(3);
+    linkedList.insert(7);
+    linkedList.append(2);
+    linkedList.append(4);
+    linkedList.append(6);
+    //assert
+    expect(linkedList.toString()).toEqual("{7} -> {3} -> {1} -> {2} -> {4} -> {6} -> NULL");
+  });
+
+  
+  it('should insert a node before a node located i the middle of a linked list', () => {
+    //arrange
+    let linkedList = new LinkedList();
+
+    //act
+    linkedList.insert(100);
+    linkedList.insert(200);
+    linkedList.insert(300);
+    linkedList.insertBefore(200, 400)
+    //assert
+    expect(linkedList.head.next.value).toEqual(400);
+  });
+
+  it('should insert a node before the first node', () => {
+    //arrange
+    let linkedList = new LinkedList();
+
+    //act
+    linkedList.insert(9);
+    linkedList.insert(6);
+    linkedList.insert(3);
+    linkedList.insertBefore(3, 1)
+    //assert
+    expect(linkedList.head.value).toEqual(1);
+  });
+
+  it('should insert after a node in the middle of the linked list', () => {
+    //arrange
+    let linkedList = new LinkedList();
+
+
+    //act
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4)
+    linkedList.insertAfter(2, 5)
+    //assert
+    expect(linkedList.head.next.next.next.value).toEqual(5);
+  });
+
+  it("Should add node to the end of the linked list", () => {
+    //arrange
+    let ll = new LinkedList();
+    //act
+    ll.insert(5);
+    ll.insert(69);
+    ll.insert(9);
+    ll.append(33);
+    //assert
+    expect(ll.toString()).toEqual("{9} -> {69} -> {5} -> {33} -> NULL");
+  });
+
+
+  });
 
 
 
@@ -114,7 +200,15 @@ describe('check errors in the Linked Lists', () => {
     expect(linkedList.head.value).toThrowError;
 
   });
+ 
 
 });
+
+
+
+
+
+
+
 
 
