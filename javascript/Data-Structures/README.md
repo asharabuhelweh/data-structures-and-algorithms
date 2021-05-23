@@ -3,10 +3,9 @@
 
 A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations.
 
-**Code_Challenge 05  Linked List Implementation**
 
 
-[Linked list Code](./linked-list/linked-list.js)
+[Linked list Code](./linked-list/linked-list1.js)
 
 [node Code](./linked-list/node.js)
 
@@ -24,9 +23,13 @@ create linked list with methods of:
  3. toString which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
 
+4.  append(value) which adds a new node with the given value to the end of the list
+5.  append(value) which adds a new node with the given value to the end of the list
+6.  insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
 ## White board
 
-![linked list ](linked-list.PNG)
+![linked list ](linked-list1.PNG)
 
 [whiteboard better view ](https://miro.com/app/board/o9J_lCjYNus=/)
 
@@ -50,6 +53,27 @@ I used toString method add all nodes in the linked list to the array of strings.
 The big O:
 - space: O(1)
 - time: O(n) 
+  
+
+  I used append method to insert node at the end of th linked list.
+
+The big O:
+- space: O(1)
+- time: O(n)
+
+I used insertBefore method to insert node before specific node 
+
+The big O:
+- space: O(1)
+- time: O(n)
+
+I used insertAfter method to insert node after specific node 
+
+The big O:
+- space: O(1)
+- time: O(n)
+
+
 
 
 ## API
@@ -58,6 +82,9 @@ The big O:
 2. include method pass a value and check for it in the linked list and return true or false 
 
 3. toSting method add all nodes in linked list to sting variable (array)
-  
+4.  append method pass value as argument and add nodes at the last of the linked list 
+5. insertBefore method pass the value and new value as arguments and insert  new node before the value of passing node 
+6. insertAfter method pass the value and new value as arguments and insert new node after the value of passing node 
+
 
 
