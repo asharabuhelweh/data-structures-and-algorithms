@@ -203,6 +203,64 @@ describe('check errors in the Linked Lists', () => {
  
 
 });
+describe( 'check kthFromEnd method',()=>{
+  it("should through an error when k is greater than the length of the linked list", () => {
+     //arrange
+    let linkedList = new LinkedList();
+      //act
+    linkedList.insert(1);
+    linkedList.insert(3);
+    linkedList.insert(7);
+    linkedList.append(9);
+     //assert
+
+    expect(linkedList.kthFromEnd(6)).toThrowError;
+  });
+  
+  it("should through an error when when k and the length of the linked list are the same", () => {
+      //arrange
+    let linkedList = new LinkedList();
+      //act
+    linkedList.insert(100);
+    linkedList.insert(200);
+    linkedList.append(10);
+      //assert
+    expect(linkedList.kthFromEnd(3)).toThrowError;
+  });
+       
+  it("should through an error when k is not a positive integer  ", () => {
+      //arrange
+    let linkedList = new LinkedList();
+      //act
+    linkedList.insert(1);
+    linkedList.insert(2);
+      //assert
+    expect(linkedList.kthFromEnd(-2)).toThrowError;
+  });
+  
+  it("should return the head node when the linked list is of a size 1  ", () => {
+    //arrange
+    let linkedList = new LinkedList();
+     //act
+    linkedList.insert(55);
+  
+     //assert
+    expect(linkedList.kthFromEnd(0)).toEqual(55);
+  });
+  
+  it("should return “Happy Path” when k is not at the end, but somewhere in the middle of the linked list ", () => {
+    //arrange
+    let linkedList = new LinkedList();
+    //act
+    linkedList.insert(33);
+    linkedList.insert(22);
+    linkedList.append(1);
+    linkedList.append(11);
+     //assert
+    expect(linkedList.kthFromEnd(2)).toEqual(33);
+  });
+
+});
 
 
 

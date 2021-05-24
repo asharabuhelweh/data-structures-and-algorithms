@@ -4,6 +4,7 @@ const Node = require('./node.js');
 class LinkedList {
   constructor() {
     this.head = null;
+    this.size=0;
 
   }
 
@@ -14,10 +15,12 @@ class LinkedList {
       let node = new Node(value);
       if (!this.head) {
         this.head = node;
+        this.size++;
       }
       else {
         node.next = this.head;
         this.head = node;
+        this.size++;
       }
     }
 
@@ -76,13 +79,16 @@ class LinkedList {
     try {
       let node = new Node(value);
       if (!this.head) {// empty linked list
-        this.head = node; //refer the head to the the new node 
+        this.head = node;
+        this.size++;
+         //refer the head to the the new node 
       } else { //there is nodes in the linked list 
         let current = this.head;
         while (current.next) {
           current = current.next;
         }
         current.next = node;
+        this.size++;
       }
     }
     catch (error) {
@@ -100,6 +106,7 @@ class LinkedList {
       if (this.head.value === value) {
         newNode.next = this.head
         this.head = newNode;
+        this.size++;
       }
 
       let current = this.head  //make a pointer to point to the head
@@ -108,6 +115,7 @@ class LinkedList {
         if (current.next.value === value) {  //find the passed value 
           newNode.next = current.next;
           current.next = newNode;
+          this.size++;
           return;
         }
         else {
@@ -138,6 +146,7 @@ class LinkedList {
           let node = current.next;
           current.next = newNode;
           newNode.next = node;
+          this.size++;
         }
         current = current.next;
       }
@@ -146,7 +155,46 @@ class LinkedList {
     }
   }
 
+
+  // kthFromEnd(k) {
+  //   let current = this.head;
+  //   let position = this.length - 1 - k;
+  //   let index = 0;
+  //   while(current) {
+  //     if(position === index) {
+  //       console.log(current.value);
+  //       return current.value;
+  //     }
+  //     current = current.next
+  //     index++;
+  //   }
+  //   console.log(`Exception`);
+  //   return "Exception";
+  // }
+
+  kthFromEnd(k){
+    //method to return the value of passing parameter as reversed index of the linked list 
+    try { let current=this.head;  //make a pointer to point to the head
+      let  i=this.size-1;          
+      while(current){             // loop over ll until head=null
+        if(i===k){                 // condition to equalize k with the index of node 
+          return current.value;   //return the value of the node when the condition true 
+        }
+        else{
+          current=current.next;   //condition false move to the next node 
+          i--;                    //increment the index 
+        }
+      }
+      
+    } catch (error) {
+      throw new Error (`Error in kthFromEnd method,invalid k` , error);
+    }
+   
+  }
+
 }
+
+
 
 
 
