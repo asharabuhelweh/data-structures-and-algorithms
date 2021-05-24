@@ -24,12 +24,15 @@ create linked list with methods of:
 "{ a } -> { b } -> { c } -> NULL"
 
 4.  append(value) which adds a new node with the given value to the end of the list
-5.  append(value) which adds a new node with the given value to the end of the list
+5.  insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+
 6.  insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+   
+7.  kthFromEnd(k) which add number as a parameter(k) and Return the node’s value that is k from the end of the linked list.
 
 ## White board
 
-![linked list ](linked-list1.PNG)
+![linked list ](linked-list3.PNG)
 
 [whiteboard better view ](https://miro.com/app/board/o9J_lCjYNus=/)
 
@@ -73,6 +76,12 @@ The big O:
 - space: O(1)
 - time: O(n)
 
+I used kthFromEnd(k) method to return the value of passing parameter as reversed index of the linked list 
+
+The big O:
+- space: O(1)
+- time: O(n)
+
 
 
 
@@ -84,7 +93,8 @@ The big O:
 3. toSting method add all nodes in linked list to sting variable (array)
 4.  append method pass value as argument and add nodes at the last of the linked list 
 5. insertBefore method pass the value and new value as arguments and insert  new node before the value of passing node 
-6. insertAfter method pass the value and new value as arguments and insert new node after the value of passing node 
+6. insertAfter method pass the value and new value as arguments and insert new node after the value of passing node
+7. kthFromEnd method pass a reversed index as argument and return the value of the matching node  
 
 
 
