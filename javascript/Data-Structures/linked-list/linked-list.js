@@ -156,21 +156,7 @@ class LinkedList {
   }
 
 
-  // kthFromEnd(k) {
-  //   let current = this.head;
-  //   let position = this.length - 1 - k;
-  //   let index = 0;
-  //   while(current) {
-  //     if(position === index) {
-  //       console.log(current.value);
-  //       return current.value;
-  //     }
-  //     current = current.next
-  //     index++;
-  //   }
-  //   console.log(`Exception`);
-  //   return "Exception";
-  // }
+  
 
   kthFromEnd(k){
     //method to return the value of passing parameter as reversed index of the linked list 

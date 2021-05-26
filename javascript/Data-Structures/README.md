@@ -29,12 +29,14 @@ create linked list with methods of:
 6.  insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
    
 7.  kthFromEnd(k) which add number as a parameter(k) and Return the node’s value that is k from the end of the linked list.
+8.  zipLists(list1, list2) which  takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. 
 
 ## White board
 
-![linked list ](linked-list3.PNG)
+![linked list ](linked-list5.PNG)
 
-[whiteboard better view ](https://miro.com/app/board/o9J_lCjYNus=/)
+
+[whiteboard better view ](https://miro.com/app/board/o9J_lCM8pus=/)
 
 ## Approach & Efficiency
 
@@ -81,8 +83,11 @@ I used kthFromEnd(k) method to return the value of passing parameter as reversed
 The big O:
 - space: O(1)
 - time: O(n)
+  
 
-
+I used zipLL function to return one zipped list from tow linked list 
+- space: O(1)
+- time: O(n)
 
 
 ## API
@@ -94,7 +99,9 @@ The big O:
 4.  append method pass value as argument and add nodes at the last of the linked list 
 5. insertBefore method pass the value and new value as arguments and insert  new node before the value of passing node 
 6. insertAfter method pass the value and new value as arguments and insert new node after the value of passing node
-7. kthFromEnd method pass a reversed index as argument and return the value of the matching node  
+7. kthFromEnd method pass a reversed index as argument and return the value of the matching node
+8. zipLists: takes in two linked lists as arguments and returns zip linked list with both lists nodes alternating.
+  
 
 
 
