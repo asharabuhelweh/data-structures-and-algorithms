@@ -33,7 +33,7 @@ create linked list with methods of:
 
 ## White board
 
-![linked list ](linked-list5.PNG)
+![linked list ](./assets/linked-list5.PNG)
 
 
 [whiteboard better view ](https://miro.com/app/board/o9J_lCM8pus=/)
