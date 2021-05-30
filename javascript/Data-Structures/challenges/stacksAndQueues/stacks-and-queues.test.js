@@ -1,7 +1,5 @@
 'use strict';
 const {Node,Stack,Queue} =require('./stacks-and-queues');
-// const {Stack}=require('./stacks-and-queues');
-// const {Queue}=require('./stacks-and-queues');
 const { expect } = require('@jest/globals');
 
 describe('Node class',()=>{
