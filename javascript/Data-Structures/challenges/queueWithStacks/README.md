@@ -42,7 +42,7 @@ method to extract a value from the PseudoQueue, using a first-in, first-out appr
 
 ### whiteboard
 
-![whiteboard](queueWithStacks/assets/queue-with-stacks.PNG)
+![whiteboard](./assets/queue-with-stacks.PNG)
 
 [white board better view](https://miro.com/app/board/o9J_lB3_UZE=/)
 
