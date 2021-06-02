@@ -1,23 +1,23 @@
 # Data Structures and Algorithms
 
-See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 
-## Repository Quick Tour and Usage
 
-### 301 Code Challenges
 
-Under the `data-structures-and-algorithms` repository, at the top level is a folder called `code-challenges`
 
-Each day, you'll add one new file to this folder to do your work for the day's assigned code challenge
+  ## Table of Content 401 challenges
 
-### 401 Data Structures, Code Challenges
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
-  
-  ## Table of Content 
+|Code Challenge | Link |
+|---------------|------|
+|	Reverse an array| [click](javascript/array-reverse)|
+|Array Shift|[click](javascript/array-shif)|
+|  Array-binary-search|[click](javascript/array-binary-search)|
+| Linked List Implementation|[click](javascript/Data-Structures/challenges/linked-list)|
+|Zip Lists|[click](javascript/Data-Structures/challenges/linked-list/__tests__/ll-zip.test.js)
+|Stacks And Queues|[click](javascript/Data-Structures/challenges/linked-list/__tests__/ll-zip.test.js)|
+|Queue With Stacks|[click](javascript/Data-Structures/challenges/queueWithStacks)|
+|FIFO Animal Shelter|[click](javascript/Data-Structures/challenges/fifoAnimalShelter)|
+|Multi Bracket Validation|[click](javascript/Data-Structures/challenges/multiBracketValidation)|
 
-| Code Challenge      | Title | link    |
-| :---        |    :----:   |          ---: |
-| Class: 01      | 	Reverse an array       | [click](javascript/array-reverse)   |
-| Class: 02   | Array Shift        | [click](javascript/array-shif)      |
+
 
