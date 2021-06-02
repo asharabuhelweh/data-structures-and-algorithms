@@ -11,7 +11,11 @@ class LinkedList {
 
 
   insert(value) {
-    try {
+    // try {
+      if(!value || value===undefined){
+        return('please insert value!');
+      }
+
       let node = new Node(value);
       if (!this.head) {
         this.head = node;
@@ -24,10 +28,10 @@ class LinkedList {
       }
     }
 
-    catch (error) {
-      console.log(`error in insert method `, error);
-    }
-  }
+    // catch (error) {
+    //   console.log(`error in insert method `, error);
+    // }
+  // }
 
   includes(value) {
     try {

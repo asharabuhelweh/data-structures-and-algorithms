@@ -1,5 +1,4 @@
 'use strict';
-const Node = require('../node.js');
 const LinkedList = require('../linked-list.js');
 const { expect } = require('@jest/globals');
 
@@ -188,21 +187,21 @@ describe('linked list', () => {
 
 
 
-describe('check errors in the Linked Lists', () => {
+// describe('check errors in the Linked Lists', () => {
 
-  it('should throw error in insert method', () => {
-    //arrange
-    let linkedList = new LinkedList();
-    //act
-    linkedList.insert();
+//   // it('should throw error in insert method', () => {
+//   //   //arrange
+//   //   let linkedList = new LinkedList();
+//   //   //act
+//   //   linkedList.insert();
 
-    //assert
-    expect(linkedList.head.value).toThrowError;
+//   //   //assert
+//   //   expect(linkedList.head.value).toThrowError;
 
-  });
+//   // });
  
 
-});
+// });
 describe( 'check kthFromEnd method',()=>{
   it("should through an error when k is greater than the length of the linked list", () => {
      //arrange
@@ -264,7 +263,11 @@ describe( 'check kthFromEnd method',()=>{
 
 
 
-
+test('edge cases, the inserted value null or undefined',()=>{
+  let linkedList = new LinkedList();
+   
+   expect(linkedList.insert()).toBe('please insert value!');
+})
 
 
 
