@@ -30,14 +30,6 @@ function zipLL(firstList, secondList) {
     return ('please insert valid values!');
   }
 
-  if (firstList.head === null && !secondList.head === null) {
-    return secondList.head;
-  }
-
-  if (secondList.head === null && !firstList.head === null) {
-    return firstList.head;
-  }
-
   let firstValue = firstList.head;
   let secondValue = secondList.head;
   while (firstValue.next && secondValue.next) {
