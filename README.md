@@ -13,7 +13,7 @@
 |Array Shift|[click](javascript/array-shif)|
 |  Array-binary-search|[click](javascript/array-binary-search)|
 | Linked List Implementation|[click](javascript/Data-Structures/challenges/linked-list)|
-|Zip Lists|[click](javascript/Data-Structures/challenges/linked-list/__tests__/ll-zip.test.js)
+|Zip Lists|[click](javascript/Data-Structures/challenges/linked-list/ll-zip.js)
 |Stacks And Queues|[click](javascript/Data-Structures/challenges/linked-list/__tests__/ll-zip.test.js)|
 |Queue With Stacks|[click](javascript/Data-Structures/challenges/queueWithStacks)|
 |FIFO Animal Shelter|[click](javascript/Data-Structures/challenges/fifoAnimalShelter)|
