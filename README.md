@@ -17,7 +17,8 @@
 |Stacks And Queues|[click](javascript/Data-Structures/challenges/linked-list/__tests__/ll-zip.test.js)|
 |Queue With Stacks|[click](javascript/Data-Structures/challenges/queueWithStacks)|
 |FIFO Animal Shelter|[click](javascript/Data-Structures/challenges/fifoAnimalShelter)|
-|Multi Bracket Validation|[click](javascript/Data-Structures/challenges/multiBracketValidation)|
+|Multi Bracket Validation|[click](javascript/Data-Structures/challenges/multiBracketValidation)
+|Tree|[click](javascript/Data-Structures/challenges/tree)
 
 
 
