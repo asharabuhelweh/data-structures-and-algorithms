@@ -4,7 +4,7 @@ const Node = require('./node.js');
 class LinkedList {
   constructor() {
     this.head = null;
-    this.size=0;
+    this.size = 0;
 
   }
 
@@ -12,25 +12,25 @@ class LinkedList {
 
   insert(value) {
     // try {
-      if(!value || value===undefined){
-        return('please insert value!');
-      }
-
-      let node = new Node(value);
-      if (!this.head) {
-        this.head = node;
-        this.size++;
-      }
-      else {
-        node.next = this.head;
-        this.head = node;
-        this.size++;
-      }
+    if (!value || value === undefined) {
+      return ('please insert value!');
     }
 
-    // catch (error) {
-    //   console.log(`error in insert method `, error);
-    // }
+    let node = new Node(value);
+    if (!this.head) {
+      this.head = node;
+      this.size++;
+    }
+    else {
+      node.next = this.head;
+      this.head = node;
+      this.size++;
+    }
+  }
+
+  // catch (error) {
+  //   console.log(`error in insert method `, error);
+  // }
   // }
 
   includes(value) {
@@ -85,7 +85,7 @@ class LinkedList {
       if (!this.head) {// empty linked list
         this.head = node;
         this.size++;
-         //refer the head to the the new node 
+        //refer the head to the the new node 
       } else { //there is nodes in the linked list 
         let current = this.head;
         while (current.next) {
@@ -113,8 +113,8 @@ class LinkedList {
         this.size++;
       }
 
-      let current = this.head  //make a pointer to point to the head
-      while (current) {        //loop over ll until head=null
+      let current = this.head //make a pointer to point to the head
+      while (current) { //loop over ll until head=null
 
         if (current.next.value === value) {  //find the passed value 
           newNode.next = current.next;
@@ -160,26 +160,27 @@ class LinkedList {
   }
 
 
-  
 
-  kthFromEnd(k){
+
+  kthFromEnd(k) {
     //method to return the value of passing parameter as reversed index of the linked list 
-    try { let current=this.head;  //make a pointer to point to the head
-      let  i=this.size-1;          
-      while(current){             // loop over ll until head=null
-        if(i===k){                 // condition to equalize k with the index of node 
+    try {
+      let current = this.head;  //make a pointer to point to the head
+      let i = this.size - 1;
+      while (current) {             // loop over ll until head=null
+        if (i === k) {                 // condition to equalize k with the index of node 
           return current.value;   //return the value of the node when the condition true 
         }
-        else{
-          current=current.next;   //condition false move to the next node 
+        else {
+          current = current.next;   //condition false move to the next node 
           i--;                    //increment the index 
         }
       }
-      
+
     } catch (error) {
-      throw new Error (`Error in kthFromEnd method,invalid k` , error);
+      throw new Error(`Error in kthFromEnd method,invalid k`, error);
     }
-   
+
   }
 
 }
