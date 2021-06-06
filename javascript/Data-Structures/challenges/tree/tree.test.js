@@ -25,6 +25,8 @@ beforeAll(() => {
   three.left = seven;
   three.right = six;
   tree = new BinaryTree(one);
+
+
   tree2 = new BinaryTree();
 
 
@@ -112,6 +114,8 @@ describe('binary tree', () => {
     expect(tree2.postOrder).toThrowError;
   });
 
+
+
 });
 
 beforeAll(() => {
@@ -150,7 +154,7 @@ describe('binary search tree', () => {
 
     expect(BSTree.add()).toBe('please insert valid value!');
   });
- 
+
 
 
 
@@ -182,7 +186,18 @@ describe('binary search tree', () => {
 });
 
 
+describe('findMax method', () => {
+  it('happy path', () => {
+    expect(tree.findMaximumValue()).toBe(17);
+  });
+  it(' edge case, empty tree', () => {
+    let tree8=new BinaryTree();
+    expect(tree8.findMaximumValue()).toBe('the Binary Tree is empty!');
+  });
 
+
+
+});
 
 
 
