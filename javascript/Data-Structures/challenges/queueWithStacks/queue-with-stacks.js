@@ -24,7 +24,7 @@ class Stack {
 
   pop() {
     if (this.size === 0) {    //check the size of the stack and throw error if it empty
-      throw new Error('the stack is empty!');  
+      throw new Error('the stack is empty!');
     }
     let temp = this.top;       //define a variable to point to the top
     this.top = temp.next;      //point the top to the next node
@@ -37,8 +37,8 @@ class Stack {
 
 
   peek() {
-    if (this.size === 0) {                    
-      throw new Error('the stack is empty!'); 
+    if (this.size === 0) {
+      throw new Error('the stack is empty!');
     }
     return this.top.value;  //return the value if the top node 
   }
@@ -46,38 +46,38 @@ class Stack {
 
 }
 
-class PseudoQueue{
-  constructor(){
-    this.stack1= new Stack();
-    this.stack2=new Stack();
+class PseudoQueue {
+  constructor() {
+    this.stack1 = new Stack();
+    this.stack2 = new Stack();
   }
 
-  enqueue(value){
-    
+  enqueue(value) {
+
     this.stack1.push(value); //push the value into stack1
 
   }
 
-  dequeue(){
+  dequeue() {
     try {
-      while(this.stack1.top){                     //loop over the values in stack 1
+      while (this.stack1.top) {                     //loop over the values in stack 1
         this.stack2.push(this.stack1.pop());      //pop the value and push it to the stack2
       }
-      let poppedValue=this.stack2.pop();           //pop the value pushed in stack2 
-      while(this.stack2.top){                       //loop over stack2
+      let poppedValue = this.stack2.pop();           //pop the value pushed in stack2 
+      while (this.stack2.top) {                       //loop over stack2
         this.stack1.push(this.stack2.pop());        //pop the value and push it to the stack1
       }
       return poppedValue;                           //return the popped value in stack2
-      
+
     } catch (error) {
-      console.error('empty queue!',error)
+      console.error('empty queue!', error)
     }
 
   }
 
-} 
-module.exports={
+}
+module.exports = {
   Node,
   Stack,
   PseudoQueue
-}
+};
