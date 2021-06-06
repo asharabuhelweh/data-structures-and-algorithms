@@ -5,6 +5,7 @@ is a non-linear data structure because it does not store in a sequential manner.
 
 - To create BinaryTree and traverse with InOrder, PreOrder and PostOrder methods.
 * To create BinarySearchTree with add(value) and contains(value) methods.
+* to create method return the maximum value stored in the binary tree. 
  
 ### Approach & Efficiency
 
@@ -12,6 +13,9 @@ is a non-linear data structure because it does not store in a sequential manner.
 - preOrder(): space O(h)time O(n)
 - inOrder(): space O(h)/time O(n)
 - postOrder(): space O(h)/time O(n)
+  
+- findMaximumBinaryTree(): space O(h)/time O(1)
+
 
 #### BinarySearchTree
  add(value):
@@ -32,6 +36,7 @@ The BinaryTree methods:
 1. **`preOrder()`** To traverse the nodes and return the values in order of root/left/right in an array.
 2. **`inOrder()`** To traverse the nodes and return the values in order of left/root/right in an array
 3. **`postOrder()`**  To traverse the nodes and return the values in order of left/right/root in an array
+4. **`findMaximumBinaryTree()`** return the maximum value stored in the numeric tree
 
 
 The BinarySearchTree methods:
@@ -41,5 +46,5 @@ The BinarySearchTree methods:
 
  **Whiteboard**
 
-![whiteboard](tree.PNG)
+![whiteboard](trees.PNG)
 [whiteboard Better View, click here!](https://miro.com/app/board/o9J_lA7Dlbg=/)
