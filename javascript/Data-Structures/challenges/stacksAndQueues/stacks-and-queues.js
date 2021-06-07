@@ -119,4 +119,4 @@ module.exports = {
   Node: Node,
   Stack: Stack,
   Queue: Queue
-}
+};
