@@ -1,5 +1,6 @@
 'use strict';
 let Node = require('./node.js');
+let { Queue } = require('../stacksAndQueues/stacks-and-queues.js');
 class BinaryTree {
   constructor(root = null) {
     this.root = root;
@@ -53,7 +54,6 @@ class BinaryTree {
   }
   findMaximumValue() {
     if (!this.root) {
-      // throw new Error('empty binary tree!');
       return 'the Binary Tree is empty!';
 
     }
@@ -78,11 +78,41 @@ class BinaryTree {
       return max.value;
     }
   }
+  breadthFirst() {
+    let result = [];
+    if (!this.root) {
+      return 'the Binary Tree is empty!';
 
+    }
+    //create new Queue
+    let breadthQueue = new Queue;
+    //add (Enqueue) the root node of the binary tree to the breadthQueue
+    breadthQueue.Enqueue(this.root);
+    //loop through the breadthQueue until the front ==null
+    while (breadthQueue.front) {
+      //save the fistNode in the queue in a variable by using dequeue method
+      let firstNode = breadthQueue.dequeue();
+      //push the value of the firstNode in the queue to the array
+      result.push(firstNode.value);
+      //check if fistNode has a left node
+      if (firstNode.left) {
+        //add (Enqueue) the left node of the fist node to the breadthQueue
+        breadthQueue.Enqueue(firstNode.left);
 
+      }
+      //check if fistNode has a right node
 
+      if (firstNode.right) {
+        //add (Enqueue) the right node of the fist node to the breadthQueue
+
+        breadthQueue.Enqueue(firstNode.right);
+
+      }
+    }
+    return result;
+
+  }
 }
-
 
 class BinarySearchTree {
   constructor(root = null) {

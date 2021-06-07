@@ -5,7 +5,8 @@ is a non-linear data structure because it does not store in a sequential manner.
 
 - To create BinaryTree and traverse with InOrder, PreOrder and PostOrder methods.
 * To create BinarySearchTree with add(value) and contains(value) methods.
-* to create method return the maximum value stored in the binary tree. 
+* To create method return the maximum value stored in the binary tree. 
+* To create method to traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
  
 ### Approach & Efficiency
 
@@ -13,8 +14,11 @@ is a non-linear data structure because it does not store in a sequential manner.
 - preOrder(): space O(h)time O(n)
 - inOrder(): space O(h)/time O(n)
 - postOrder(): space O(h)/time O(n)
-  
 - findMaximumBinaryTree(): space O(h)/time O(1)
+- breadthFirst(): space O(h)/time O(n)
+
+
+  
 
 
 #### BinarySearchTree
@@ -37,6 +41,7 @@ The BinaryTree methods:
 2. **`inOrder()`** To traverse the nodes and return the values in order of left/root/right in an array
 3. **`postOrder()`**  To traverse the nodes and return the values in order of left/right/root in an array
 4. **`findMaximumBinaryTree()`** return the maximum value stored in the numeric tree
+5. **`breadthFirst()`** traversal method which takes a Binary Tree as its unique input. return a list of the values in the tree in the order they were encountered.
 
 
 The BinarySearchTree methods:
@@ -48,3 +53,8 @@ The BinarySearchTree methods:
 
 ![whiteboard](trees.PNG)
 [whiteboard Better View, click here!](https://miro.com/app/board/o9J_lA7Dlbg=/)
+
+
+**challenge 17 Whiteboard**
+![whiteboard](breadth-first.PNG)
+[whiteboard Better View, click here!](https://miro.com/app/board/o9J_lBNHCwA=/)

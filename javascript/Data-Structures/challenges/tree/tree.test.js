@@ -171,7 +171,7 @@ describe('binary search tree', () => {
 
 
 
-    // console.log(treeify.asTree(BSTree, true));
+    console.log(treeify.asTree(tree, true));
 
 
 
@@ -191,7 +191,7 @@ describe('findMax method', () => {
     expect(tree.findMaximumValue()).toBe(17);
   });
   it(' edge case, empty tree', () => {
-    let tree8=new BinaryTree();
+    let tree8 = new BinaryTree();
     expect(tree8.findMaximumValue()).toBe('the Binary Tree is empty!');
   });
 
@@ -199,5 +199,20 @@ describe('findMax method', () => {
 
 });
 
+describe('breadth first traversal method', () => {
 
+  it('should return a collection from a breadth traversal', () => {
+    //arrange
+    let expected = [10, 5, 15, 3, 7, 12, 17];
+    //act
+    let breadthResult = tree.breadthFirst();
+    //assert
+    expect(breadthResult).toEqual(expected);
+
+  });
+  it(' edge case empty Binary tree, should raise an exception', () => {
+    let tree8 = new BinaryTree();
+    expect(tree8.breadthFirst()).toBe('the Binary Tree is empty!');
+  });
+});
 
