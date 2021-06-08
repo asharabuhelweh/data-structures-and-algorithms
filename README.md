@@ -19,6 +19,7 @@
 |FIFO Animal Shelter|[click](javascript/Data-Structures/challenges/fifoAnimalShelter)|
 |Multi Bracket Validation|[click](javascript/Data-Structures/challenges/multiBracketValidation)
 |Tree|[click](javascript/Data-Structures/challenges/tree)
+|FizzBuzz|[click](javascript/Data-Structures/challenges/fizzBuzzTree)
 
 
 
