@@ -21,6 +21,8 @@
 |Tree|[click](javascript/Data-Structures/challenges/tree)
 |FizzBuzz|[click](javascript/Data-Structures/challenges/fizzBuzzTree)
 |Insertion Sort|[click](javascript/Data-Structures/challenges/InsertionSort)
+|Merge Sort|[click](javascript/Data-Structures/challenges/mergeSort)
+
 
 
 
