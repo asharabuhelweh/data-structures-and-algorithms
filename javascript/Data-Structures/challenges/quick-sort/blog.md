@@ -84,6 +84,7 @@ compare the pivot (23) with pointer(16),and the 16<23,don't move the pivot and i
 
 compare the pivot (23) with pointer(42),and since 24>23, swap the places, now the 23 in the right place and the right section is sorted also 
  ![1](./././asset/800.PNG)
+ 
   ![1](./././asset/900.PNG)
 
 
