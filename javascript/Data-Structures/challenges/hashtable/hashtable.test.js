@@ -47,10 +47,13 @@ it ('should retrieve a value from a bucket within the hashtable that has a colli
   expect (arr[0]).toEqual ('tired2');
   expect (arr[1]).toEqual ('tired2');
 });
-it ('should retrieve a value from a bucket within the hashtable that has a collision' , ()=>{
+it ('edge case, should raise exception when the kye is not in the bucket ' , ()=>{
+
   let hashtable = new HashTable (1021);
+  hashtable.add ('ashar' , 'tired100000000000000');
+
   
-  expect (hashtable.get ('ashar')).toEqual ('sorry the inserted key  is not in the bucket');
+  expect (hashtable.get ('lana')).toEqual ('sorry the inserted key  is not in the bucket');
 });
 
 
