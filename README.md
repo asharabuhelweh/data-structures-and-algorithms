@@ -24,9 +24,7 @@
 |Merge Sort|[click](javascript/Data-Structures/challenges/mergeSort)
 |Quick Sort|[click](javascript/Data-Structures/challenges/quick-sort)
 |Hash table|[click](javascript/Data-Structures/challenges/hashtable)
-
-
-
+|Repeated-word|[click](javascript/Data-Structures/challenges/hashmap-repeated-word)
 
 
 
