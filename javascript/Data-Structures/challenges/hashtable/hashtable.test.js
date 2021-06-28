@@ -58,7 +58,7 @@ it ('edge case, should raise exception when the kye is not in the bucket ' , ()=
 
 
 it ('should hash a key to an in-range value' , ()=>{
-  let hashtable = new HashTable (1021);
+  let hashtable = new HashTable (1005);
   let hashed = hashtable.hash ('ashar');
   expect (hashed).toBeLessThanOrEqual (599 % hashtable.size);
 });
