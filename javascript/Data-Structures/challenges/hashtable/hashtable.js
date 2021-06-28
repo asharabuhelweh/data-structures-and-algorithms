@@ -43,14 +43,16 @@ class HashTable {
   }
 
   hash(key) {
-    let hash = 0;
 
-    hash = key.split('').reduce((result, n) => {
-      return result + n.charCodeAt(0);
-    }, 0) * 599 % this.size;
+    // hash = key.split('').reduce((result, n) => {
+    //   return result + n.charCodeAt(0);
+    // }, 0) * 599 % this.size;
+    const hash = key.split('').reduce((acc, val) => {
+      return acc * val.charCodeAt(0);
+    }, 1);
+    return (hash * 71) % this.table.length;
 
 
-    return hash;
   }
 
   add(key, value) {
