@@ -26,6 +26,7 @@
 |Hash table|[click](javascript/Data-Structures/challenges/hashtable)
 |Repeated-word|[click](javascript/Data-Structures/challenges/hashmap-repeated-word)
 |hashmap-tree-intersection|[click](javascript/Data-Structures/challenges/hashmap-tree-intersection)
+|hashmap-left-join|[click](javascript/Data-Structures/challenges/hashmap-left-join.js)
 
 
 
