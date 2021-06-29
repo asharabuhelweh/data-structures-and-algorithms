@@ -42,18 +42,29 @@ class HashTable {
     this.table = new Array(size);
   }
 
+  // hash(key) {
+
+  //   // hash = key.split('').reduce((result, n) => {
+  //   //   return result + n.charCodeAt(0);
+  //   // }, 0) * 599 % this.size;
+  //   const hash = key.split('').reduce((acc, val) => {
+  //     return acc * val.charCodeAt(0);
+  //   }, 1);
+  //   return (hash * 71) % this.table.length;
+
+
+  // }
   hash(key) {
+    let hash = 0;
 
-    // hash = key.split('').reduce((result, n) => {
-    //   return result + n.charCodeAt(0);
-    // }, 0) * 599 % this.size;
-    const hash = key.split('').reduce((acc, val) => {
-      return acc * val.charCodeAt(0);
-    }, 1);
-    return (hash * 71) % this.table.length;
+    hash = key.split('').reduce((result, n) => {
+      return result + n.charCodeAt(0);
+    }, 0) * 599 % this.size;
 
 
+    return hash;
   }
+
 
   add(key, value) {
     let hash = this.hash(key);
